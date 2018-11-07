@@ -62,6 +62,12 @@ function! airline#themes#gruvbox#refresh()
 
   let g:airline#themes#gruvbox#palette.accents = { 'red': accents_group }
 
+let s:TE = [ '#1C1C1C' , '#3A3A3A' , 254 , 237 , '' ]
+let g:airline#themes#gruvbox#palette.normal.airline_term = airline#highlighter#get_highlight('airline_c')
+let g:airline#themes#gruvbox#palette.insert.airline_term  = g:airline#themes#gruvbox#palette.normal.airline_term
+let g:airline#themes#gruvbox#palette.visual.airline_term  = g:airline#themes#gruvbox#palette.normal.airline_term
+let g:airline#themes#gruvbox#palette.replace.airline_term = g:airline#themes#gruvbox#palette.normal.airline_term
+
   let s:TF = airline#themes#get_highlight2(['Normal', 'bg'], ['Normal', 'bg'])
   let g:airline#themes#gruvbox#palette.tabline = {
     \ 'airline_tab':  s:N2,
